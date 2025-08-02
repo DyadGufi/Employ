@@ -1,0 +1,54 @@
+@use '../abstract' as var;
+
+
+.check {
+    //&-label {
+    //    display: flex;
+    //    align-items: center;
+    //    gap: 10px;
+    //    cursor: pointer;
+    //    width: max-content;
+    //}
+    //
+    //&__input {
+    //    appearance: none;
+    //    width: 20px;
+    //    height: 20px;
+    //    border: 1px solid #dadada;
+    //    border-radius: 0.25rem;
+    //    background-color: #fff;
+    //    cursor: pointer;
+    //    transition: all var.$transition-short ease;
+    //    margin: 0;
+    //
+    //    background-image: url("/public/images/icons/check.svg");
+    //    background-position: center;
+    //    background-repeat: no-repeat;
+    //    background-size: 14px;
+    //}
+    //
+    //&__input:hover:not(:disabled) {
+    //    border-color: var.$def-dark;
+    //}
+    //
+    //&__input:focus {
+    //    border-color: black;
+    //    outline: none;
+    //    //box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+    //}
+    //
+    //&__input:checked {
+    //    background-color: var.$def-dark;
+    //    border-color: var.$def-dark;
+    //}
+    //
+    //&__input:disabled {
+    //    opacity: 0.5;
+    //    cursor: not-allowed;
+    //}
+    //
+    //&__input:disabled + span {
+    //    opacity: 0.5;
+    //    cursor: not-allowed;
+    //}
+}

@@ -1,0 +1,21 @@
+@use '../../abstract' as var;
+
+.footer-link-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    font-size: 13px;
+    white-space: nowrap;
+
+    &__img {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+@media(max-width: var.$device-width-desktop-mini) {
+    .footer-link-item {
+        gap: 5px;
+    }
+}

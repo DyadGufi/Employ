@@ -1,0 +1,88 @@
+@use '../../abstract' as var;
+
+.reg-block-step {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+
+    height: 100%;
+    flex-grow: 1;
+
+    text-align: center;
+
+    &:not(:last-child)::before {
+        content: "";
+        position: absolute;
+        right: -25%;
+        top: 50px;
+        width: 50%;
+        height: 6px;
+        background-size: 4px 4px;
+
+        border-bottom: 6px dotted;
+    }
+
+    &-img-block {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        width: 100px;
+        height: 100px;
+
+        background-color: var.$btn-primary;
+
+        border: 5px solid #286690;
+        border-radius: 50%;
+    }
+
+    &__img {
+        width: 55px;
+        height: 55px;
+    }
+}
+
+@media(max-width: var.$device-width-tablet) {
+    .reg-block-step {
+
+        &-img-block {
+            width: 60px;
+            min-width: 60px;
+            height: 60px;
+        }
+
+        &__img {
+            width: 27.5px;
+            height: 27.5px;
+        }
+
+        &:not(:last-child)::before {
+            top: 25px;
+        }
+    }
+}
+
+@media(max-width: var.$device-width-small-tablet) {
+    .reg-block-step {
+        flex-direction: row;
+        align-items: center;
+
+        &__title {
+            text-align: left;
+        }
+
+        &:not(:last-child)::before {
+            left: 22px;
+            right: initial;
+            top: initial;
+            bottom: -25px;
+            width: 6px;
+            height: 20px;
+
+            border-right: 6px dotted;
+            border-bottom: none;
+        }
+    }
+}

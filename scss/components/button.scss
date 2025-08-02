@@ -1,0 +1,63 @@
+@use '../abstract' as var;
+
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+    min-width: 183px;
+
+    font-size: 13px;
+    text-transform: uppercase;
+    white-space: nowrap;
+
+    padding: 11px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all var.$transition-base ease;
+
+    svg {
+        transition: all var.$transition-base;
+    }
+
+    &-primary {
+        color: #fff;
+        border: 1px solid var.$border-light;
+        background-color: var.$btn-primary;
+
+        svg {
+            fill: #fff;
+        }
+
+        &:hover {
+            color: #212121;
+            background-color: #fff;
+            border: 1px solid var.$border-dark;
+
+            svg {
+                fill: #212121;
+            }
+        }
+    }
+
+    &-outline {
+        color: #212121;
+        border: 1px solid var.$border-dark;
+        background-color: var.$btn-outline;
+
+        svg {
+            fill: #212121;
+        }
+
+        &:hover {
+            color: #fff;
+            border: 1px solid var.$border-light;
+            background-color: var.$btn-primary;
+
+            svg {
+                fill: #fff;
+            }
+        }
+    }
+}

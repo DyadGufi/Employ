@@ -1,0 +1,89 @@
+@use '../abstract/index' as var;
+
+.range {
+
+    &-top {
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+
+        margin-bottom: 4px;
+    }
+
+    &__slider {
+        appearance: none;
+        background: none;
+        //border: 1px solid #fff;
+        //background-color: rgba(255,255,255, 0.7);
+        height: 13px;
+
+        &::-webkit-slider-runnable-track {
+            box-sizing: border-box;
+            height: 15px;
+            background-color: rgba(255,255,255, 0.7);
+        }
+
+        &::-moz-range-track {
+            box-sizing: border-box;
+            background-color: rgba(255,255,255, 0.7);
+        }
+
+        &::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            width: 25px;
+            height: 25px;
+            margin-top: -10px;
+            border: none;
+            border-radius: 50%;
+            background: var.$def-blue;
+            box-shadow: 0 0 0 3px inset #286690;
+            transition: 300ms;
+        }
+
+        &::-moz-range-thumb {
+            width: 25px;
+            height: 25px;
+            margin-top: 0;
+            border: none;
+            border-radius: 50%;
+            background: var.$def-blue;
+            box-shadow: 0 0 0 5px inset #286690;
+            transition: 300ms;
+        }
+
+        &:focus-visible {
+            outline-offset: 3px;
+        }
+
+        &:hover::-webkit-slider-thumb,
+        &:focus-visible::-webkit-slider-thumb {
+            box-shadow: 0 0 0 2px inset #286690;
+        }
+
+        &:hover::-moz-range-thumb,
+        &:focus-visible::-moz-range-thumb {
+            box-shadow: 0 0 0 2px inset #286690;
+        }
+
+        &:active::-webkit-slider-thumb {
+            box-shadow: 0 0 0 5px inset #286690;
+        }
+        &:active::-moz-range-thumb {
+            box-shadow: 0 0 0 5px inset #286690;
+        }
+
+        &::-webkit-slider-runnable-track {
+            box-sizing: border-box;
+            height: 8px;
+            border-radius: 10px;
+            border: 1px solid #fff;
+        }
+
+        &::-moz-range-track {
+            box-sizing: border-box;
+            height: 8px;
+            border-radius: 10px;
+            border: 1px solid #fff;
+        }
+    }
+}

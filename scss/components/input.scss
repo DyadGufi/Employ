@@ -1,0 +1,113 @@
+@use '../abstract' as var;
+
+//SELECT
+select {
+    cursor: pointer;
+    color: #212121;
+}
+
+select option {
+    color: #212121;
+}
+
+//INPUTS
+select,
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none; // Yeah, yeah everybody write about it
+}
+
+select,
+input[type='number'],
+input[type="number"]:hover,
+input[type="number"]:focus {
+    appearance: none;
+    -moz-appearance: textfield;
+}
+
+select,
+input[type=text],
+input[type=tel],
+input[type=email],
+input[type=password],
+input[type=number] {
+    //position: relative;
+    padding: 12px 10px;
+    font-size: 16px;
+    color: var.$input-txt;
+
+    border: 1px solid #dadada;
+    background-color: rgba(255,255,255, 0.85);
+    border-radius: 3px;
+
+    transition: all var.$transition-base ease;
+
+    &:disabled {
+        background-color: #f6f6f6;
+        cursor: not-allowed;
+    }
+
+    &:hover {
+        border: 1px solid var.$def-blue;
+        box-shadow: 0 0 20px 6px rgba(var.$def-blue,0.15)
+    }
+}
+
+select {
+    border: none !important;
+}
+
+input:placeholder-shown {
+    text-overflow: ellipsis;
+}
+
+
+
+select {
+    &,
+    &::picker(select) {
+        appearance: base-select;
+    }
+
+    select:focus {
+        box-shadow: 0 0 20px 6px rgba(var.$def-blue,0.15)
+    }
+
+    &:open::picker-icon {
+        rotate: 180deg;
+    }
+
+    option {
+        background: rgba(#272733E5, 0.9);
+        color: #fff;
+        padding: 10px;
+        transition: var.$transition-base;
+
+        &:disabled {
+            color: #c3c3c3;
+            cursor: not-allowed;
+        }
+
+        &:not(:disabled):hover {
+            color: var.$def-blue;
+        }
+
+        &::checkmark {
+            display: none;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

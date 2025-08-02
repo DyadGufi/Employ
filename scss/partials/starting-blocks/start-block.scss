@@ -1,0 +1,87 @@
+@use '../../abstract' as var;
+
+.start-block {
+    position: relative;
+    display: grid;
+
+    height: 850px;
+
+    &__bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+
+        z-index: -1;
+    }
+
+    &-wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 80px;
+
+        height: 100%;
+        width: 70%;
+
+        padding-top: 106px;
+    }
+
+    &__title {
+        text-transform: uppercase;
+        line-height: 100%;
+    }
+
+    &-btns {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+}
+
+@media(max-width: var.$device-width-tablet) {
+    .start-block {
+        height: 600px;
+
+        &-wrapper {
+            width: 100%;
+        }
+    }
+}
+
+@media(max-width: var.$device-width-small-tablet) {
+    .start-block {
+        height: 500px;
+
+        &-wrapper {
+            width: 100%;
+            gap: 35px;
+        }
+
+        &__title {
+            font-size: 24px;
+        }
+    }
+}
+
+@media(max-width: var.$device-width-mini-tablet) {
+    .start-block {
+
+        &-wrapper {
+            padding-top: 95px;
+        }
+
+        &-btns {
+            flex-direction: column;
+            gap: 10px;
+
+            .btn {
+                width: 100%;
+            }
+        }
+    }
+}

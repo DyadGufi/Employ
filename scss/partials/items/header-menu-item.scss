@@ -1,0 +1,12 @@
+@use '../../abstract' as var;
+
+.header-menu-item {
+    font-size: 13px;
+    text-transform: uppercase;
+
+    transition: all var.$transition-base;
+
+    &:hover {
+        color: var.$def-blue;
+    }
+}

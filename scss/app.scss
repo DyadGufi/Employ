@@ -1,0 +1,29 @@
+
+//GENERAL
+@import 'general/index';
+@import 'abstract/index';
+@import './helpers.scss';
+
+//PARTIALS
+@import 'partials/footer';
+@import 'partials/header';
+@import 'partials/tab-bar';
+
+//BLOCKS
+@import 'partials/blocks/reg';
+@import 'partials/starting-blocks/start-block';
+
+//ITEMS
+@import 'partials/items/header-menu-item';
+@import 'partials/items/reg-block-step';
+@import 'partials/items/footer-payment-item';
+
+//COMPONENTS
+@import 'components/button';
+@import 'components/input';
+@import 'components/checkbox';
+@import 'components/def-input';
+@import 'components/def-form';
+@import 'components/range';
+
+//

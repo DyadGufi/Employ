@@ -1,0 +1,30 @@
+@use '../abstract' as var;
+
+.container {
+    width: 100%;
+    max-width: 1172px;
+
+    margin: 0 auto;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
+    height: 100%;
+}
+
+
+@media(max-width: var.$device-width-desktop-mini) {
+    .container {
+        max-width: 100%;
+        padding: 0 20px;
+    }
+}
+
+@media(max-width: var.$device-width-small-tablet) {
+    .container {
+        padding: 0 10px;
+    }
+}

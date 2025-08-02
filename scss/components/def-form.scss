@@ -1,0 +1,24 @@
+@use '../abstract/index' as var;
+
+.def-form {
+
+    &-blocks {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    &-politics {
+        font-size: 11px;
+        color: #a3a3a3;
+    }
+
+    &-btns .btn {
+        width: 100%;
+    }
+
+    &-bottom {
+        display: flex;
+        justify-content: center;
+    }
+}

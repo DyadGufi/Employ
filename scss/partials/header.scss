@@ -1,0 +1,59 @@
+@use '../abstract/index' as var;
+
+.header {
+  position: fixed;
+  top: 0;
+
+  width: 100%;
+
+  padding: 33px 0;
+  background-color: rgba(#10101DE5, 0.9);
+
+  color: #fff;
+  z-index: 10;
+
+  &__logo {
+    width: 247px;
+    height: 35px;
+
+    object-fit: contain;
+  }
+
+  &-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &-menu {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+  }
+
+}
+
+@media(max-width: var.$device-width-tablet) {
+    .header {
+
+        &-menu {
+            gap: 15px;
+        }
+
+        &__logo {
+            width: 204px;
+            height: 20px;
+        }
+    }
+}
+
+@media(max-width: var.$device-width-small-tablet) {
+    .header {
+        padding: 15px 0;
+
+        &-wrapper {
+            flex-direction: column;
+            gap: 20px;
+        }
+    }
+}

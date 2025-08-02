@@ -1,0 +1,13 @@
+@use "./abstract" as var;
+
+.txt-blue {
+    color: var.$def-blue;
+}
+
+.full-width {
+    width: 100%;
+}
+
+.nowrp {
+    white-space: nowrap;
+}

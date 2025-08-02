@@ -1,0 +1,149 @@
+@use '../../abstract' as var;
+
+.reg-block {
+    position: relative;
+    padding: 120px 0 150px 0;
+    color: #fff;
+
+    &__bg {
+        position: absolute;
+        left: 0;
+        top: 0;
+        object-fit: cover;
+
+        width: 100%;
+        height: 100%;
+
+        z-index: -1;
+    }
+
+    &-top {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+
+        margin-bottom: 80px;
+    }
+
+    &__title {
+        font-size: 36px;
+
+        color: #fff;
+    }
+
+    &__subtitle {
+        font-size: 18px;
+    }
+
+    &-steps {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        margin-bottom: 80px;
+
+        & > div {
+            width: calc(100% - 232px);
+        }
+    }
+
+    &-separator {
+        display: none;
+        width: 12%;
+
+        //transform: translateX(-100px);
+
+        border-bottom: 6px dotted #c3c3c3;
+
+        padding-top: 50px;
+    }
+
+    &-form {
+        flex-direction: column;
+
+        &,
+        &-inputs,
+        &-bottom {
+            display: flex;
+            gap: 30px;
+        }
+
+        &-inputs {
+            flex-wrap: wrap;
+
+            & > div {
+                width: calc((100% - 60px) / 3);
+            }
+        }
+
+        &-bottom {
+
+            &-left {
+                width: calc(((100% - 15px) / 3) * 2);
+                min-width: calc(((100% - 15px) / 3) * 2);
+            }
+        }
+
+        &-send {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .btn {
+                width: calc((100% - 60px) / 3);
+                margin: 0 auto;
+            }
+        }
+
+    }
+}
+
+@media(max-width: var.$device-width-small-tablet) {
+    .reg-block {
+        padding: 60px 0 90px 0;
+
+        &__title {
+            font-size: 30px;
+        }
+
+        &__subtitle {
+            font-size: 16px;
+        }
+
+        &-top {
+            margin-bottom: 40px;
+        }
+
+        &-steps {
+            flex-direction: column;
+            gap: 30px;
+
+            & > div {
+                width: 100%;
+            }
+        }
+
+        &-form {
+
+            &-inputs {
+                gap: 10px;
+
+                & > div {
+                    width: 100%;
+                }
+            }
+
+            &-bottom {
+                flex-wrap: wrap;
+                gap: 10px;
+
+                .btn,
+                &-left {
+                    width: 100%;
+                    min-width: 100%;
+                }
+            }
+        }
+
+    }
+}

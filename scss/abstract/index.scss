@@ -1,0 +1,9 @@
+$transition-base: .35s;
+$transition-short: .2s;
+
+$border-radius-base: 2px;
+$border-radius-base-lg: 10px;
+
+@forward "colors";
+@forward "devices";
+@forward "z-index";
