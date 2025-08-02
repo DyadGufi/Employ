@@ -1,0 +1,49 @@
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  min-width: 183px;
+  font-size: 13px;
+  text-transform: uppercase;
+  white-space: nowrap;
+  padding: 11px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.35s ease;
+}
+.btn svg {
+  transition: all 0.35s;
+}
+.btn-primary {
+  color: #fff;
+  border: 1px solid #fff;
+  background-color: #3E9CDC;
+}
+.btn-primary svg {
+  fill: #fff;
+}
+.btn-primary:hover {
+  color: #212121;
+  background-color: #fff;
+  border: 1px solid #6F6D7B;
+}
+.btn-primary:hover svg {
+  fill: #212121;
+}
+.btn-outline {
+  color: #212121;
+  border: 1px solid #6F6D7B;
+  background-color: #fff;
+}
+.btn-outline svg {
+  fill: #212121;
+}
+.btn-outline:hover {
+  color: #fff;
+  border: 1px solid #fff;
+  background-color: #3E9CDC;
+}
+.btn-outline:hover svg {
+  fill: #fff;
+}/*# sourceMappingURL=button.css.map */

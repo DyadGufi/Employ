@@ -1,0 +1,8 @@
+.header-menu-item {
+  font-size: 13px;
+  text-transform: uppercase;
+  transition: all 0.35s;
+}
+.header-menu-item:hover {
+  color: #43ABF0;
+}/*# sourceMappingURL=header-menu-item.css.map */

@@ -1,0 +1,17 @@
+.footer-link-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+  white-space: nowrap;
+}
+.footer-link-item__img {
+  width: 20px;
+  height: 20px;
+}
+
+@media (max-width: 1280px) {
+  .footer-link-item {
+    gap: 5px;
+  }
+}/*# sourceMappingURL=footer-payment-item.css.map */

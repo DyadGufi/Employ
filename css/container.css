@@ -1,0 +1,25 @@
+.container {
+  width: 100%;
+  max-width: 1172px;
+  margin: 0 auto;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1;
+  height: 100%;
+}
+
+@media (max-width: 1280px) {
+  .container {
+    max-width: 100%;
+    padding: 0 20px;
+  }
+}
+@media (max-width: 768px) {
+  .container {
+    padding: 0 10px;
+  }
+}/*# sourceMappingURL=container.css.map */

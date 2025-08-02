@@ -1,0 +1,37 @@
+.def-input {
+  width: 100%;
+  position: relative;
+  padding: 13px 13px;
+  border-radius: 44px;
+  border: 1px solid #dadada;
+  background-color: #fff;
+  transition: all 0.35s ease;
+  font-size: 14px;
+}
+.def-input-alert {
+  border: 1px solid #ff2323 !important;
+  background-color: #ffefef !important;
+}
+.def-input-alert:hover, .def-input-alert:focus-visible {
+  box-shadow: none !important;
+}
+.def-input-fake-btn {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 7px;
+  border: 1px solid #d6d6d6;
+  color: #a3a3a3;
+  text-align: left;
+  transition: all 0.35s ease;
+  padding: 8px 8px;
+}
+.def-input-fake-btn:hover {
+  box-shadow: 0 0 0 1px rgb(6, 96, 105);
+}
+.def-input-fake-btn__svg {
+  fill: #a3a3a3;
+}/*# sourceMappingURL=def-input.css.map */
