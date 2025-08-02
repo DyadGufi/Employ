@@ -1,0 +1,61 @@
+@use '../abstract/index' as var;
+
+.def-select {
+    padding: 12px 30px 12px 12px;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    cursor: pointer;
+    width: 100%;
+    
+    border: 1px solid #dadada;
+    background-color: rgba(255,255,255, 0.85);
+    border-radius: 3px;
+    transition: all var.$transition-base ease;
+    
+    &:focus {
+        border-color: var.$def-blue;
+        box-shadow: 0 0 20px 6px rgba(var.$def-blue,0.15);
+    }
+
+    option {
+        background: rgba(#272733E5, 0.9);
+        color: #fff;
+        padding: 10px;
+        transition: var.$transition-base;
+
+        &:disabled {
+            color: #c3c3c3;
+            cursor: not-allowed;
+        }
+
+        &:not(:disabled):hover {
+            color: var.$def-blue;
+        }
+    }
+
+    &-wrapper {
+        position: relative;
+        display: inline-block;
+        width: 100%;
+
+        &::after {
+            content: '';
+            position: absolute;
+            right: 12px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 16px;
+            height: 16px;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L6 6L11 1' stroke='currentColor' stroke-width='2'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: center;
+            pointer-events: none;
+            transition: transform var.$transition-base ease;
+        }
+
+        &-active::after {
+            transform: translateY(-50%) rotate(180deg);
+        }
+}
+}

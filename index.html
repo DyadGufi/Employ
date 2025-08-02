@@ -166,12 +166,13 @@
                     <form method="POST" class="reg-block-form js-form">
                         <div class="reg-block-form-inputs">
                             <div class="reg-block-form-input">
-                                <select name="type" id="type" class="def-select full-width">
-                                    <option value="" disabled selected>Выберите тип системы</option>
-                                    <option value="test1">тест 1</option>
-                                    <option value="test2">тест 2</option>
-                                    <option value="test3">тест 3</option>
-                                </select>
+                                <div class="def-select-wrapper">
+                                    <select name="type" id="type" class="def-select full-width">
+                                        <option value="" selected disabled>Выберите тип системы</option>
+                                        <option value="1">Вариант 1</option>
+                                        <option value="2">Вариант 2</option>
+                                    </select>
+                                </div>
                             </div>
 
                             <div class="def-form-group">
@@ -192,21 +193,21 @@
                                         </div>
 
                                         <div class="range-percent nowrp">
-                                    <span class="range-percent-num">
-                                        75
-                                    </span>
-                                            %
-                                        </div>
+                                        <span class="range-percent-num">
+                                            75
+                                        </span>
+                                        %
+                                    </div>
                                     </div>
 
                                     <input
-                                            type="range"
-                                            min="0"
-                                            max="100"
-                                            value="75"
-                                            class="range__slider full-width"
-                                            id="progress-slider"
-                                            name="range"
+                                        type="range"
+                                        min="0"
+                                        max="100"
+                                        value="75"
+                                        class="range__slider full-width"
+                                        id="progress-slider"
+                                        name="range"
                                     >
                                 </div>
                             </div>
@@ -287,6 +288,7 @@
 
     <script  src="./js/form-logic.js"></script>
     <script  src="./js/range-logic.js"></script>
+    <script  src="./js/select-logic.js"></script>
 </div>
 </body>
 </html>

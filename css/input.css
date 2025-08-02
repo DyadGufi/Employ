@@ -54,36 +54,10 @@ input[type=number]:hover {
   box-shadow: 0 0 20px 6px rgba(67, 171, 240, 0.15);
 }
 
-select {
-  border: none !important;
-}
-
 input:placeholder-shown {
   text-overflow: ellipsis;
 }
 
-select, select::picker(select) {
-  appearance: base-select;
-}
-select select:focus {
-  box-shadow: 0 0 20px 6px rgba(67, 171, 240, 0.15);
-}
-select:open::picker-icon {
-  rotate: 180deg;
-}
-select option {
-  background: rgba(39, 39, 51, 0.9);
-  color: #fff;
-  padding: 10px;
-  transition: 0.35s;
-}
-select option:disabled {
-  color: #c3c3c3;
-  cursor: not-allowed;
-}
-select option:not(:disabled):hover {
-  color: #43ABF0;
-}
-select option::checkmark {
-  display: none;
+select {
+  border: none !important;
 }/*# sourceMappingURL=input.css.map */
