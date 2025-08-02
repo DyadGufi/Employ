@@ -9,49 +9,13 @@ if (form) {
         // Собираем данные формы
         const formData = new FormData(form);
 
-        let inputs = form.querySelectorAll('input');
-
         // Валидация полей
         if (!validateForm(form)) {
             return;
+        } else {
+            alert('Форма успешно отправлена!')
         }
 
-        // Добавляем обработку файла
-        const fileInput = form.querySelector('input[type="file"]');
-        if (fileInput.files.length > 0) {
-            formData.append('file', fileInput.files[0]);
-        }
-
-        // Добавляем CSRF-токен (если используете Laravel)
-        const csrfToken = document.querySelector('meta[name="csrf-token"]')?.content;
-        if (csrfToken) {
-            formData.append('_token', csrfToken);
-        }
-
-        try {
-            // Отправка данных
-            const response = await axios.post(form.action || '/submit-form', formData, {
-                headers: {
-                    'Content-Type': 'multipart/form-data'
-                }
-            });
-
-            // Обработка успешного ответа
-            if (response.data.success) {
-                alert('Форма успешно отправлена!');
-                form.reset();
-                // Сброс значения range slider
-                if (rangeSlider && percentNum) {
-                    rangeSlider.value = 75;
-                    percentNum.textContent = '75';
-                }
-            } else {
-                throw new Error(response.data.message || 'Ошибка при отправке формы');
-            }
-        } catch (error) {
-            console.error('Ошибка:', error);
-            alert(error.response?.data?.message || error.message || 'Произошла ошибка при отправке формы');
-        }
     });
 }
 
@@ -104,11 +68,9 @@ function isValidEmail(email) {
 }
 
 function showError(message) {
-    // Здесь можно реализовать красивый вывод ошибок
     alert(message);
 }
 
 function showSuccess(message) {
-    // Здесь можно реализовать красивый вывод успеха
     alert(message);
 }
